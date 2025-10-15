@@ -1,0 +1,9 @@
+<ul class="hidden md:flex space-x-6">
+  {{ range .Site.Menus.main }}
+  <li>
+    <a href="{{ .URL }}" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">
+      {{ .Name }}
+    </a>
+  </li>
+  {{ end }}
+</ul>

@@ -1,0 +1,109 @@
+{{ define "main" }}
+<div class="homepage">
+  <!-- Hero Section -->
+  <section class="hero bg-gradient-to-r from-primary-600 to-primary-700 text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl font-bold mb-6">Open Standards for Blockchain Deployments</h1>
+        <p class="text-xl mb-8">Community-driven initiative defining best practices for blockchain node deployments, release engineering, and infrastructure automation.</p>
+        <div class="flex gap-4 justify-center">
+          <a href="/standards/" class="btn-primary">Explore Standards</a>
+          <a href="/community/" class="btn-secondary">Join Community</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Statement -->
+  <section class="problem py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6 text-center">The Challenge</h2>
+        <p class="text-lg text-gray-700 mb-4">The blockchain ecosystem has matured rapidly, but each project implements its own unique, often inconsistent deployment practices.</p>
+        <div class="grid md:grid-cols-2 gap-6 mt-8">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-semibold text-xl mb-3">Current Issues</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Inconsistent documentation</li>
+              <li>• Unstandardized configurations</li>
+              <li>• Divergent packaging methods</li>
+              <li>• Manual setup requirements</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-semibold text-xl mb-3">Impact</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Increased operational costs</li>
+              <li>• Slower adoption rates</li>
+              <li>• Scalability challenges</li>
+              <li>• Operational risks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Overview -->
+  <section class="solution py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6 text-center">Our Solution</h2>
+        <p class="text-lg text-gray-700 text-center mb-8">Define and promote open, reproducible, and automation-friendly standards for blockchain deployments.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <div class="text-4xl mb-4">📦</div>
+            <h3 class="font-semibold text-xl mb-2">Standardized Packaging</h3>
+            <p class="text-gray-600">Consistent deployment methods across Docker, Kubernetes, and native binaries.</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl mb-4">⚙️</div>
+            <h3 class="font-semibold text-xl mb-2">Configuration Standards</h3>
+            <p class="text-gray-600">Common formats and conventions for configuration management.</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl mb-4">✅</div>
+            <h3 class="font-semibold text-xl mb-2">Certification Program</h3>
+            <p class="text-gray-600">Verify projects meet deployment and operational standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Stats -->
+  <section class="stats py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center">Community Impact</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="text-4xl font-bold text-primary-600 mb-2">Coming Soon</div>
+            <div class="text-gray-600">Certified Projects</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-primary-600 mb-2">Join Us</div>
+            <div class="text-gray-600">Active Contributors</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-primary-600 mb-2">Get Involved</div>
+            <div class="text-gray-600">Working Groups</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta py-16 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+      <p class="text-xl mb-8">Join the community building the future of blockchain infrastructure.</p>
+      <div class="flex gap-4 justify-center">
+        <a href="/standards/" class="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors">View Standards</a>
+        <a href="/community/" class="bg-primary-700 hover:bg-primary-800 font-semibold py-3 px-6 rounded-lg transition-colors">Join Community</a>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

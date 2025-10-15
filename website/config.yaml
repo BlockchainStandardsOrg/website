@@ -1,0 +1,38 @@
+baseURL: "https://blockchainstandards.dev/"
+languageCode: "en-us"
+title: "BlockchainStandards.dev"
+
+params:
+  description: "Open community-driven initiative for blockchain node deployment standards"
+  author: "BlockchainStandards.dev"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: "monokai"
+
+menu:
+  main:
+    - name: "Standards"
+      url: "/standards/"
+      weight: 1
+    - name: "Certification"
+      url: "/certification/"
+      weight: 2
+    - name: "Projects"
+      url: "/projects/"
+      weight: 3
+    - name: "Resources"
+      url: "/resources/"
+      weight: 4
+    - name: "Community"
+      url: "/community/"
+      weight: 5
+    - name: "About"
+      url: "/about/"
+      weight: 6
+    - name: "Blog"
+      url: "/blog/"
+      weight: 7
