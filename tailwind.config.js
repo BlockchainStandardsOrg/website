@@ -1,0 +1,51 @@
+module.exports = {
+  content: [
+    './layouts/**/*.html',
+    './content/**/*.md',
+  ],
+  safelist: [
+    'prose',
+    'prose-lg',
+    'prose-sm',
+    'prose-xl',
+    'prose-2xl',
+    'prose-gray',
+    'prose-slate',
+    'prose-zinc',
+    'prose-neutral',
+    'prose-stone',
+    'prose-red',
+    'prose-orange',
+    'prose-amber',
+    'prose-yellow',
+    'prose-lime',
+    'prose-green',
+    'prose-emerald',
+    'prose-teal',
+    'prose-cyan',
+    'prose-sky',
+    'prose-blue',
+    'prose-indigo',
+    'prose-violet',
+    'prose-purple',
+    'prose-fuchsia',
+    'prose-pink',
+    'prose-rose',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+        },
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+}

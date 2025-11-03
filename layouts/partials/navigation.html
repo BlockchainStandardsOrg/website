@@ -1,0 +1,43 @@
+<ul class="hidden md:flex space-x-6">
+  {{ range .Site.Menus.main }}
+  {{ if not .Parent }}
+  <li class="relative">
+    {{ if .HasChildren }}
+    <button type="button"
+      class="text-gray-700 hover:text-primary-600 transition-colors font-medium flex items-center cursor-pointer dropdown-trigger">
+      {{ .Name }}
+      <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+    <div
+      class="dropdown-menu absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible transition-all duration-200 z-50 border border-gray-200 transform -translate-y-1">
+      <ul class="py-2">
+        {{ range .Children }}
+        <li>
+          <a href="{{ .URL }}"
+            class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+            {{ .Name }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ else }}
+    <a href="{{ .URL }}" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">
+      {{ .Name }}
+    </a>
+    {{ end }}
+  </li>
+  {{ end }}
+  {{ end }}
+</ul>
+
+<style>
+  .dropdown-trigger:hover+.dropdown-menu,
+  .dropdown-menu:hover {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+</style>

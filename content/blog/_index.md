@@ -9,5 +9,3 @@ draft: false
 Stay informed about standards development, community news, and blockchain deployment best practices.
 
 ---
-
-*Blog posts coming soon. Follow us for updates.*

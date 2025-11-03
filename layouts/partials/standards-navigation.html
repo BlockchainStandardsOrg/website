@@ -1,0 +1,59 @@
+{{- $currentPath := .RelPermalink -}}
+{{- $standardsMenu := slice -}}
+
+{{- /* Find the Standards parent menu item */ -}}
+{{- range .Site.Menus.main -}}
+  {{- if eq .Identifier "standards" -}}
+    {{- /* Add the parent */ -}}
+    {{- $standardsMenu = $standardsMenu | append (dict "Name" .Name "URL" .URL) -}}
+    {{- /* Add all children */ -}}
+    {{- range sort .Children "Weight" -}}
+      {{- $standardsMenu = $standardsMenu | append (dict "Name" .Name "URL" .URL) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Find current page */ -}}
+{{- $currentIdx := -1 -}}
+{{- range $i, $page := $standardsMenu -}}
+  {{- if eq $page.URL $currentPath -}}
+    {{- $currentIdx = $i -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if ge $currentIdx 0 -}}
+  {{- $prev := cond (gt $currentIdx 0) (index $standardsMenu (sub $currentIdx 1)) nil -}}
+  {{- $next := cond (lt $currentIdx (sub (len $standardsMenu) 1)) (index $standardsMenu (add $currentIdx 1)) nil -}}
+
+  <nav class="mt-12 pt-8 border-t border-gray-200">
+    <div class="flex justify-between items-center gap-4">
+      <div class="flex-1">
+        {{- if $prev -}}
+        <a href="{{ $prev.URL }}" class="inline-flex items-center px-6 py-4 bg-white border-2 border-gray-300 rounded-lg shadow hover:bg-gray-50 hover:border-gray-400 transition-all duration-200">
+          <svg class="w-5 h-5 mr-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <div class="text-left">
+            <div class="text-xs text-gray-500 uppercase tracking-wider font-medium">Previous</div>
+            <div class="font-bold text-gray-900 mt-1">{{ $prev.Name }}</div>
+          </div>
+        </a>
+        {{- end -}}
+      </div>
+
+      <div class="flex-1 flex justify-end">
+        {{- if $next -}}
+        <a href="{{ $next.URL }}" class="inline-flex items-center px-6 py-4 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 hover:shadow-lg transition-all duration-200">
+          <div class="text-right">
+            <div class="text-xs text-blue-100 uppercase tracking-wider font-medium">Next</div>
+            <div class="font-bold mt-1">{{ $next.Name }}</div>
+          </div>
+          <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+        {{- end -}}
+      </div>
+    </div>
+  </nav>
+{{- end -}}

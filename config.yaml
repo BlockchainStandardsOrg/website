@@ -1,0 +1,89 @@
+baseURL: "https://blockchainstandards.dev/"
+languageCode: "en-us"
+title: "BlockchainStandards.dev"
+
+params:
+  description: "Open community-driven initiative for blockchain node deployment standards"
+  author: "BlockchainStandards.dev"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: "monokai"
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+      identifier: "home"
+    - name: "Standards"
+      url: "/standards/"
+      weight: 2
+      identifier: "standards"
+    - name: "1. Hardware Requirements"
+      url: "/standards/01_hardware/"
+      weight: 1
+      parent: "standards"
+    - name: "2. Communications"
+      url: "/standards/02_communications/"
+      weight: 2
+      parent: "standards"
+    - name: "3. Development Practices"
+      url: "/standards/03_development-practices/"
+      weight: 3
+      parent: "standards"
+    - name: "4. DevOps Automation"
+      url: "/standards/04_devops-automation/"
+      weight: 4
+      parent: "standards"
+    - name: "5. Build from Source"
+      url: "/standards/05_build-from-source/"
+      weight: 5
+      parent: "standards"
+    - name: "6. Binary Installation"
+      url: "/standards/06_binary-installation/"
+      weight: 6
+      parent: "standards"
+    - name: "7. Docker Containers"
+      url: "/standards/07_docker-containers/"
+      weight: 7
+      parent: "standards"
+    - name: "8. Kubernetes"
+      url: "/standards/08_kubernetes/"
+      weight: 8
+      parent: "standards"
+    - name: "9. Upgrades"
+      url: "/standards/09_upgrades/"
+      weight: 9
+      parent: "standards"
+    - name: "10. Security Practices"
+      url: "/standards/10_security-practices/"
+      weight: 10
+      parent: "standards"
+    - name: "11. Monitoring & Observability"
+      url: "/standards/11_monitoring-observability/"
+      weight: 11
+      parent: "standards"
+    - name: "12. Resource Efficiency"
+      url: "/standards/12_resource-efficiency/"
+      weight: 12
+      parent: "standards"
+    - name: "13. Miscellaneous"
+      url: "/standards/13_miscellaneous/"
+      weight: 13
+      parent: "standards"
+    - name: "Supporters"
+      url: "/supporters/"
+      weight: 3
+    - name: "Community"
+      url: "/community/"
+      weight: 4
+    - name: "About"
+      url: "/about/"
+      weight: 5
+    - name: "Blog"
+      url: "/blog/"
+      weight: 6
