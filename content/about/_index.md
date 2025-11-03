@@ -39,10 +39,9 @@ This project operates transparently and openly, inviting contributions from acro
 
 ## Get Involved
 
-- Join our [community discussions](#)
-- Contribute to [standards development](#)
-- Apply for [project certification](#)
-- Become a [sponsor](#)
+- Join our [community discussions](https://github.com/BlockchainStandardsOrg/BlockchainStandards/discussions)
+- Apply for [project certification](mailto:info@blockchainstandards.dev)
+- Become a [sponsor](mailto:info@blockchainstandards.dev)
 
 ---
 

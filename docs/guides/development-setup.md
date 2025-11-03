@@ -117,7 +117,7 @@ hugo server -D
 
 If everything is set up correctly, you should see:
 
-```
+```text
 Web Server is available at http://localhost:1313/
 ```
 
@@ -160,7 +160,7 @@ This watches for CSS changes and recompiles Tailwind automatically.
 
 ## Project Structure
 
-```
+```text
 blockchainstandards/
 ├── content/              # Markdown content files
 │   ├── blog/            # Blog posts
@@ -370,8 +370,8 @@ chmod +x .git/hooks/pre-commit
 
 ## Getting Help
 
-- **Hugo Documentation**: https://gohugo.io/documentation/
-- **Tailwind Documentation**: https://tailwindcss.com/docs
+- **Hugo Documentation**: [gohugo.io/documentation/](https://gohugo.io/documentation/)
+- **Tailwind Documentation**: [tailwindcss.com/docs](https://tailwindcss.com/docs)
 - **GitHub Issues**: Report problems or ask questions
 - **GitHub Discussions**: Community support
 

@@ -155,8 +155,8 @@ These Terms, together with our Privacy Policy, constitute the entire agreement b
 
 If you have questions about these Terms of Service, please contact us:
 
-- **Email:** legal@blockchainstandards.dev
-- **GitHub:** [https://github.com/blockchainstandards](https://github.com/blockchainstandards)
+- **Email:** [info@blockchainstandards.dev](mailto:info@blockchainstandards.dev)
+- **GitHub:** [github.com/blockchainstandards](https://github.com/blockchainstandards)
 
 ---
 

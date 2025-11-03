@@ -52,6 +52,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install markdownlint
+        run: npm install -g markdownlint
+
+      - name: Run markdownlint
+        run: markdownlint -c .markdownlint.yaml -i .markdownlintignore "**/*.md"
+
+      - name: Run commitlint
+        uses: wagoid/commitlint-github-action@v5
+        with:
+          configFile: .commitlintrc.yaml
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

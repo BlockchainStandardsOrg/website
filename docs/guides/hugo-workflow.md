@@ -68,7 +68,7 @@ hugo new community/new-page.md
 
 Hugo uses a template hierarchy to render content:
 
-```
+```text
 layouts/
 ├── _default/
 │   ├── baseof.html       # Base template
@@ -246,7 +246,7 @@ hugo list all
 
 ### Directory Structure
 
-```
+```text
 content/
 ├── blog/                  # Blog posts
 │   ├── _index.md         # Blog section page
@@ -282,7 +282,7 @@ Welcome to our standards...
 
 Blog posts are typically organized by date:
 
-```
+```text
 blog/
 ├── 2024-12-15-first-post.md
 ├── 2025-01-10-second-post.md
@@ -291,7 +291,7 @@ blog/
 
 Or in subdirectories:
 
-```
+```text
 blog/
 ├── 2024/
 │   └── 12/
@@ -463,6 +463,7 @@ categories: ["guides"]
 ```
 
 List pages for tags are auto-generated at:
+
 - `/tags/kubernetes/`
 - `/tags/docker/`
 
@@ -497,6 +498,7 @@ menu:
 **Problem:** New content doesn't appear
 
 **Solutions:**
+
 ```bash
 # Check if it's a draft
 hugo list drafts
@@ -516,6 +518,7 @@ hugo server -F
 **Problem:** Template rendering errors
 
 **Solutions:**
+
 ```bash
 # Get detailed error info
 hugo --verbose
@@ -529,6 +532,7 @@ hugo --verbose
 **Problem:** Hugo build fails
 
 **Solutions:**
+
 ```bash
 # Check config syntax
 hugo config

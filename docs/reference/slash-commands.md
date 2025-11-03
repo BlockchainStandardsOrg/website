@@ -22,15 +22,18 @@ The BlockchainStandards.dev repository uses Claude Code with custom slash comman
 Create a new GitHub issue with context gathering and clarifying questions.
 
 **Usage:**
-```
+
+```text
 /plan [title] [context]
 ```
 
 **Parameters:**
+
 - `title` - Issue title (optional, will prompt if omitted)
 - `context` - Additional context or requirements
 
 **Process:**
+
 1. Asks clarifying questions about scope and requirements
 2. Gathers information from existing files
 3. Creates structured GitHub issue with:
@@ -41,12 +44,14 @@ Create a new GitHub issue with context gathering and clarifying questions.
 4. Returns issue ID and URL
 
 **Example:**
-```
+
+```text
 /plan Add Docker container standard documentation
 ```
 
 **Output:**
-```
+
+```text
 Created issue #42: Add Docker container standard documentation
 https://github.com/mattboston/blockchainstandards/issues/42
 ```
@@ -56,22 +61,26 @@ https://github.com/mattboston/blockchainstandards/issues/42
 Refine an existing GitHub issue with additional context and requirements.
 
 **Usage:**
-```
+
+```text
 /groom [issue-id] [context]
 ```
 
 **Parameters:**
+
 - `issue-id` - GitHub issue ID (e.g., #42)
 - `context` - Additional context to add
 
 **Process:**
+
 1. Fetches current issue details
 2. Incorporates new context
 3. Updates issue description
 4. Adds clarifying questions if needed
 
 **Example:**
-```
+
+```text
 /groom #42 Include examples from Cosmos and Polkadot
 ```
 
@@ -82,15 +91,18 @@ Refine an existing GitHub issue with additional context and requirements.
 Generate code for a GitHub issue, lint, format, and stage changes.
 
 **Usage:**
-```
+
+```text
 /codegen [issue-id] [context]
 ```
 
 **Parameters:**
+
 - `issue-id` - GitHub issue ID (e.g., #42) - infers from branch if omitted
 - `context` - Optional implementation tweaks
 
 **Process:**
+
 1. Fetches issue details
 2. Asks clarifying questions
 3. Examines codebase patterns
@@ -101,17 +113,20 @@ Generate code for a GitHub issue, lint, format, and stage changes.
 8. Pauses for user review
 
 **Example:**
-```
+
+```text
 /codegen #42
 ```
 
 **What it generates:**
+
 - Hugo content files (`.md`)
 - Hugo templates (`.html`)
 - Configuration updates (`.yaml`)
 - Tailwind CSS styles (`.css`)
 
 **Does NOT:**
+
 - Create commits (use `/commit`)
 - Generate documentation (use `/docsgen`)
 
@@ -120,33 +135,39 @@ Generate code for a GitHub issue, lint, format, and stage changes.
 Generate or update documentation based on staged changes and GitHub issue.
 
 **Usage:**
-```
+
+```text
 /docsgen [issue-id]
 ```
 
 **Parameters:**
+
 - `issue-id` - GitHub issue ID - infers from branch if omitted
 
 **Process:**
 
 **Phase 1 - Outline:**
+
 1. Analyzes staged changes
 2. Searches existing docs
 3. Creates documentation outline
 4. Posts outline to GitHub for approval
 
 **Phase 2 - Writing:**
-5. Generates documentation following outline
-6. Matches existing documentation style
-7. Lints and formats markdown
-8. Stages documentation files
+
+1. Generates documentation following outline
+2. Matches existing documentation style
+3. Lints and formats markdown
+4. Stages documentation files
 
 **Example:**
-```
+
+```text
 /docsgen #42
 ```
 
 **Documentation types:**
+
 - `docs/guides/` - How-to guides
 - `docs/reference/` - Technical reference
 - Top-level - Overviews and architecture
@@ -156,14 +177,17 @@ Generate or update documentation based on staged changes and GitHub issue.
 Create a conventional commit from staged changes.
 
 **Usage:**
-```
+
+```text
 /commit [tldr]
 ```
 
 **Parameters:**
+
 - `tldr` - Optional brief description
 
 **Process:**
+
 1. Analyzes staged changes
 2. Reviews recent commits for style
 3. Runs `git status` and `git diff`
@@ -171,7 +195,8 @@ Create a conventional commit from staged changes.
 5. Creates commit with proper attribution
 
 **Commit format:**
-```
+
+```text
 type(scope): description
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
@@ -180,6 +205,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 ```
 
 **Commit types:**
+
 - `feat` - New feature
 - `fix` - Bug fix
 - `docs` - Documentation changes
@@ -189,7 +215,8 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 - `chore` - Maintenance tasks
 
 **Example:**
-```
+
+```text
 /commit
 
 # Generates:
@@ -205,14 +232,17 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 Test implementation based on GitHub issue testing plan and fix issues.
 
 **Usage:**
-```
+
+```text
 /test [issue-id]
 ```
 
 **Parameters:**
+
 - `issue-id` - GitHub issue ID - infers from branch if omitted
 
 **Process:**
+
 1. Fetches issue testing plan
 2. Runs Hugo build validation
 3. Tests templates and configuration
@@ -223,6 +253,7 @@ Test implementation based on GitHub issue testing plan and fix issues.
 8. Creates GitHub comment with results
 
 **Testing steps:**
+
 ```bash
 hugo --quiet              # Build validation
 hugo config               # Config check
@@ -231,7 +262,8 @@ hugo --minify             # Production build test
 ```
 
 **Example:**
-```
+
+```text
 /test #42
 ```
 
@@ -242,14 +274,17 @@ hugo --minify             # Production build test
 Lint, format, commit, and create GitHub PR for the issue.
 
 **Usage:**
-```
+
+```text
 /review [issue-id]
 ```
 
 **Parameters:**
+
 - `issue-id` - GitHub issue ID - infers from branch if omitted
 
 **Process:**
+
 1. Checks for staged changes
 2. Commits changes if needed (via `/commit`)
 3. Pushes branch to remote
@@ -260,7 +295,8 @@ Lint, format, commit, and create GitHub PR for the issue.
 5. Returns PR URL
 
 **Example:**
-```
+
+```text
 /review #42
 
 # Creates PR:
@@ -276,14 +312,17 @@ Lint, format, commit, and create GitHub PR for the issue.
 Squash and merge PR to main with proper attribution and close GitHub issue.
 
 **Usage:**
-```
+
+```text
 /merge [issue-id]
 ```
 
 **Parameters:**
+
 - `issue-id` - GitHub issue ID - infers from branch if omitted
 
 **Process:**
+
 1. Fetches PR for issue
 2. Verifies PR is approved
 3. Squash merges to main
@@ -293,7 +332,8 @@ Squash and merge PR to main with proper attribution and close GitHub issue.
 7. Pulls latest changes
 
 **Example:**
-```
+
+```text
 /merge #42
 ```
 
@@ -304,17 +344,20 @@ Squash and merge PR to main with proper attribution and close GitHub issue.
 Clear context and reload CLAUDE.md rules, workflows, and guidelines.
 
 **Usage:**
-```
+
+```text
 /refresh
 ```
 
 **Process:**
+
 1. Clears current context
 2. Reloads CLAUDE.md
 3. Refreshes rule understanding
 4. Updates workflow knowledge
 
 **When to use:**
+
 - After updating CLAUDE.md
 - When Claude seems confused about rules
 - At start of new session
@@ -324,22 +367,26 @@ Clear context and reload CLAUDE.md rules, workflows, and guidelines.
 Add a new rule to the CLAUDE.md guidelines.
 
 **Usage:**
-```
+
+```text
 /add-rule [category] <description>
 ```
 
 **Parameters:**
+
 - `category` - Rule category (Questions, Planning, Code Generation, etc.)
 - `description` - Rule description
 
 **Process:**
+
 1. Validates category exists
 2. Generates rule ID (e.g., C-5)
 3. Adds rule to CLAUDE.md
 4. Stages changes
 
 **Example:**
-```
+
+```text
 /add-rule "Code Generation" "Always validate Hugo templates after changes"
 
 # Adds to CLAUDE.md:
@@ -351,21 +398,25 @@ Add a new rule to the CLAUDE.md guidelines.
 Create a new Claude Code slash command.
 
 **Usage:**
-```
+
+```text
 /make-command <name> <description>
 ```
 
 **Parameters:**
+
 - `name` - Command name (without /)
 - `description` - What the command does
 
 **Process:**
+
 1. Creates `.claude/commands/<name>.md`
 2. Generates command template
 3. Adds to available commands list
 
 **Example:**
-```
+
+```text
 /make-command lint "Run all linters on the codebase"
 
 # Creates: .claude/commands/lint.md
@@ -376,7 +427,8 @@ Create a new Claude Code slash command.
 Manage Dependabot PRs: checkout, test, approve, and merge.
 
 **Usage:**
-```
+
+```text
 /dependabot <pr-number>    # Full workflow
 /dependabot test           # Test current branch
 /dependabot update         # Commit and push changes
@@ -385,7 +437,8 @@ Manage Dependabot PRs: checkout, test, approve, and merge.
 ```
 
 **Full workflow:**
-```
+
+```text
 /dependabot 123
 
 # Executes:
@@ -398,6 +451,7 @@ Manage Dependabot PRs: checkout, test, approve, and merge.
 ```
 
 **Sub-commands:**
+
 - `test` - Run Hugo build and validation tests
 - `update` - Commit fixes and push to PR
 - `check` - Check GitHub Actions status
@@ -512,7 +566,8 @@ gh pr checkout 120
 **Problem:** Slash command doesn't work
 
 **Solution:**
-```
+
+```text
 /refresh  # Reload command definitions
 ```
 
@@ -521,6 +576,7 @@ gh pr checkout 120
 **Problem:** Command fails with error
 
 **Solutions:**
+
 1. Check if you're on correct branch
 2. Verify issue exists: `gh issue view #42`
 3. Check git status: `git status`
@@ -531,6 +587,7 @@ gh pr checkout 120
 **Problem:** `gh` commands fail
 
 **Solutions:**
+
 ```bash
 # Verify authentication
 gh auth status

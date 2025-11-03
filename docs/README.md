@@ -8,7 +8,7 @@ BlockchainStandards.dev is an open community-driven initiative focused on defini
 
 ## Repository Structure
 
-```
+```text
 blockchainstandards/
 ├── content/                   # Site content
 │   ├── blog/                 # Blog posts
@@ -70,7 +70,7 @@ blockchainstandards/
 
 4. **View the site:**
 
-   Open http://localhost:1313 in your browser
+   Open [http://localhost:1313](http://localhost:1313) in your browser
 
 ### Building for Production
 
@@ -148,9 +148,10 @@ The site is automatically deployed to Vercel when changes are pushed to the `mai
 
 ## Links
 
-- **Website**: https://blockchainstandards.dev
-- **GitHub**: https://github.com/mattboston/blockchainstandards
-- **Issues**: https://github.com/mattboston/blockchainstandards/issues
+- **Website**: [blockchainstandards.dev](https://blockchainstandards.dev)
+- **GitHub**: [github.com/BlockchainStandardsOrg/BlockchainStandards](https://github.com/BlockchainStandardsOrg/BlockchainStandards)
+- **Issues**: [github.com/BlockchainStandardsOrg/BlockchainStandards/issues](https://github.com/BlockchainStandardsOrg/BlockchainStandards/issues)
+- **Discussion**: [github.com/BlockchainStandardsOrg/BlockchainStandards/discussions](https://github.com/BlockchainStandardsOrg/BlockchainStandards/discussions)
 
 ## License
 

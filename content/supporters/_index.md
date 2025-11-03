@@ -72,4 +72,4 @@ Projects and individuals making meaningful contributions to standards developmen
 
 ---
 
-*Interested in becoming a supporter? [Get in touch](mailto:support@blockchainstandards.dev) to learn more about support opportunities and benefits.*
+*Interested in becoming a supporter? [Get in touch](mailto:info@blockchainstandards.dev) to learn more about support opportunities and benefits.*

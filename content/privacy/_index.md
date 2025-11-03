@@ -122,8 +122,8 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 
 If you have questions or concerns about this Privacy Policy, please contact us:
 
-- **Email:** info@blockchainstandards.dev
-- **GitHub:** [https://github.com/blockchainstandards](https://github.com/blockchainstandards)
+- **Email:** [info@blockchainstandards.dev](mailto:info@blockchainstandards.dev)
+- **GitHub:** [github.com/blockchainstandards](https://github.com/blockchainstandards)
 
 ---
 
