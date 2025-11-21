@@ -608,17 +608,17 @@ gh repo view
 
 ## Command Summary
 
-| Command | Purpose | Phase |
-|---------|---------|-------|
-| `/plan` | Create GitHub issue | Planning |
-| `/groom` | Refine issue | Planning |
-| `/codegen` | Generate code | Implementation |
-| `/docsgen` | Generate docs | Implementation |
-| `/commit` | Create commit | Implementation |
-| `/test` | Test implementation | Testing |
-| `/review` | Create PR | Review |
-| `/merge` | Merge and close | Deployment |
-| `/refresh` | Reload guidelines | Utility |
-| `/add-rule` | Add new rule | Utility |
-| `/make-command` | Create command | Utility |
-| `/dependabot` | Manage Dependabot | Utility |
+Command | Purpose | Phase
+---------|---------|-------
+`/plan` | Create GitHub issue | Planning
+`/groom` | Refine issue | Planning
+`/codegen` | Generate code | Implementation
+`/docsgen` | Generate docs | Implementation
+`/commit` | Create commit | Implementation
+`/test` | Test implementation | Testing
+`/review` | Create PR | Review
+`/merge` | Merge and close | Deployment
+`/refresh` | Reload guidelines | Utility
+`/add-rule` | Add new rule | Utility
+`/make-command` | Create command | Utility
+`/dependabot` | Manage Dependabot | Utility
