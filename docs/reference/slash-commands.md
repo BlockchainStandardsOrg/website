@@ -609,7 +609,7 @@ gh repo view
 ## Command Summary
 
 Command | Purpose | Phase
----------|---------|-------
+--------- | --------- | -------
 `/plan` | Create GitHub issue | Planning
 `/groom` | Refine issue | Planning
 `/codegen` | Generate code | Implementation

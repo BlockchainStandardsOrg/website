@@ -150,7 +150,7 @@ This project follows [Conventional Commits](https://www.conventionalcommits.org/
 
 ### Commit Message Format
 
-```
+```text
 <type>(<scope>): <subject>
 
 <body>
