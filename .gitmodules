@@ -1,0 +1,3 @@
+[submodule "content/standards"]
+	path = content/standards
+	url = https://github.com/BlockchainStandardsOrg/BlockchainStandards.git
