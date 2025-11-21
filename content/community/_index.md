@@ -24,11 +24,12 @@ Participate in discussions, ask questions, and share your experiences with block
 
 [Join GitHub Discussions](https://github.com/BlockchainStandardsOrg/BlockchainStandards/discussions)
 
-### Twitter
+### Social Media
 
-Follow us on Twitter for updates, announcements, and community highlights.
+Follow us on Twitter and Bluesky for updates, announcements, and community highlights.
 
-[Follow @BlockchainStds](https://x.com/BlockchainsDS)
+[Follow @BlockchainDS](https://x.com/BlockchainsDS)
+[Follow @blockchainstandard.bsky.social](https://bsky.app/profile/blockchainstandard.bsky.social)
 
 ### Blog
 
