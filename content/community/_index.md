@@ -22,7 +22,7 @@ Join us on GitHub to contribute to the standards, report issues, or submit pull 
 
 Participate in discussions, ask questions, and share your experiences with blockchain node deployments.
 
-[Join GitHub Discussions](https://github.com/BlockchainStandardsOrg/BlockchainStandards/discussions)
+Join Discord Discussions - Coming Soon
 
 ### Social Media
 
